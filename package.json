@@ -1,0 +1,30 @@
+{
+  "name": "familybonding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "babel src -D --out-dir dist",
+    "start": "npm run clean && npm run transpile && node dist/app.js",
+    "clean": "rimraf dist",
+    "dev": "nodemon"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10"
+  },
+  "nodemonConfig": {  
+    "exec": "npm run start",
+    "watch": ["server/*", "public/*", "src/*"],
+  "ignore": ["**/__tests__/**", "*.test.js", "*.spec.js"]
+  }
+}
