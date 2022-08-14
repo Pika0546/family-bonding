@@ -1,8 +1,8 @@
 import express from "express";
-import { getHome } from "./SiteController";
+import { createAccount, getAccountList, getHome } from "./SiteController";
 
 const router = express.Router();
 
-router.get('/', getHome)
+router.get('/', getAccountList)
 
 export default router;
