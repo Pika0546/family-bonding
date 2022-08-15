@@ -5,7 +5,7 @@ import createError from 'http-errors';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
-import { connectDB } from './model/connectDB';
+import { connectDB } from './config/connectDB';
 
 dotenv.config();
 
